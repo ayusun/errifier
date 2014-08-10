@@ -67,6 +67,35 @@ Client
 
 Double click errifier(application generated to run the appliation)
 
+**[OPTIONAL = To Use SSL in ERRIFIER]**
+
+The first step is to generate all the keys
+
+Generate Server Private Key by 
+```
+openssl genrsa -out server-key.pem 2048
+```
+Generate Server Public key and then self sign it by 
+```
+openssl req -new -x509 -key server-key.pem -out server-cert.pem -days 10000
+```
+
+Generate Client Private key by 
+```
+openssl genrsa -out client-key.pem 2048
+```
+Generate Client Public Key and self sign it by 
+```
+openssl req -new -x509 -key client-key.pem -out client-cert.pem -days 10000
+```
+> For the client put client-key.pem, client-cert.pem and server-cert.pem in the folder where executable is present
+> For the server put server-key.pem, server-cert.pem and client-cert.pem in the folder where server executable is located
+
+Thats how you add certificates for one server and one client
+
+>To allow the client to connect to multiple server. Concatinate the server-cert.pem of those servers using cat command and name it as server-cert.pem.
+
+
 Contact Me
 ==========
 

@@ -1,0 +1,7 @@
+Directed for version 1.0
+ + Added Remove Server Option in menu bar
+ + Added option for SSL
+ + Changed server from TNonBlocking to TThreadPoolServer
+ + Few Changes in DS
+ + Changed Few Messages
+ + Removed bug that used to give warning when a notification used to pop

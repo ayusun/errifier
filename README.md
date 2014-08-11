@@ -14,10 +14,10 @@ errifier makes your job easy, by looking for errors and then by notifying you ab
 Let the error occur when it has to occur
 ---------------------------------------
 
-How To Use It?
+When To Use It?
 ==============
 
-Following a scenario that i believe, where it can be useful, however you are free to think of any other scenario that you think of
+Following is a scenario that i believe, where it can be useful, however you are free to think of any other scenario that you think of
 
 So, Suppose you are a server guy, who has to manage the server. That means you know, the importance that error log plays in your work right? So traditionally how you were managing logs: You open log and see whats the timestamp of last error, Or you would open your mail for logs that contain error and what not. So, did you see, how much time is wasted on opening those logs and then locating errors.
 
@@ -95,6 +95,23 @@ Thats how you add certificates for one server and one client
 
 >To allow the client to connect to multiple server. Concatinate the server-cert.pem of those servers using cat command and name it as server-cert.pem.
 
+Steps to use it
+===============
+1). First start the errifier server using ./server or ./server -s(for ssl, but make sure you have all the certificates as i have described above)
+
+2). Now start your client(errifier executable file).
+
+3). If you want to use SSL, then go to *settings* and click on *SSL*
+
+4). Select a server from the combo box or add it from settings > Server > Add server
+
+5). In the first text box, Type the name of the server's log file about whose error you want to get notified. For example, for apache its **/var/log/apache2/error.log**, your server may have something else
+
+6) In the next textbox, type in a friendly name. This is the name, that will distinguish your each watch, much like a primary key, it should be unique
+
+7) Click on start watch. The watch will be started and you would be notified as soon as an error occurs
+
+Note : There is a ping button available in UI. It tells you whether your server programming(i.e errifier server is running or not and doesn't check whether the state of application server)
 
 Contact Me
 ==========
